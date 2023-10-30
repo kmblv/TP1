@@ -1,0 +1,8 @@
+1
+Submarine
+Crew10
+Length = 10.000000
+Width = 10.000000
+TimeUnderWater = 10
+MaxUnderWaterSpeed = 10
+Weapon: ô
