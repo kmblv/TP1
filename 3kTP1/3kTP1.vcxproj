@@ -142,6 +142,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Exception.h" />
     <ClInclude Include="Keeper.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Sailboat.h" />

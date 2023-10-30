@@ -1,8 +1,16 @@
 1
 Submarine
 Crew10
-Length = 10.000000
-Width = 10.000000
-TimeUnderWater = 10
-MaxUnderWaterSpeed = 10
-Weapon: ô
+Length = 2
+Width = 1m
+TimeUnderWater = 1s
+MaxUnderWaterSpeed = 100m
+Weapon: 10
+2
+Submarine
+Crew10
+Length = 2
+Width = 1m
+TimeUnderWater = 1s
+MaxUnderWaterSpeed = 100m
+Weapon: 10

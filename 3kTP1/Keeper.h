@@ -49,6 +49,8 @@ void Keeper::add(Ship* elem)
 void Keeper::del(size_t num)
 {
 	delete ships.pop(num);
+	if (num < 0)
+		throw exception("Нет объектов");
 }
 
 bool Keeper::save(string file)
