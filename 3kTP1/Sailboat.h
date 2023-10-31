@@ -11,13 +11,14 @@ public:
 	Sailboat(string type, string name, bool is_peaceful, int hull_length, int speed, int crew);
 	Sailboat(Sailboat& temp);
 	~Sailboat();
+	virtual string getPrintData() override;
 	virtual string getData() override;
 };
 
 /////////////////////
 
 Sailboat::Sailboat(string type, string name, bool is_peaceful, int hull_length, int speed, int crew) {
-	cout << "Sailboat has been added" << endl;
+	cout << "\tSailboat has been added" << endl;
 	this->type = type;
 	this->name = name;
 	this->is_peaceful = is_peaceful;
@@ -39,7 +40,7 @@ Sailboat::Sailboat() {
 
 
 Sailboat::Sailboat(Sailboat& temp) {
-	cout << "Sailboat has been added" << endl;
+	cout << "\tSailboat has been added" << endl;
 	type = temp.type;
 	name = temp.name;
 	is_peaceful = temp.is_peaceful;
@@ -55,10 +56,18 @@ Sailboat::~Sailboat() {
 }
 
 
-string Sailboat::getData() {
-	return "Type: " + type + "\n" + "Name: " + name + "\n"
+string Sailboat::getPrintData() {
+	return "Sailboat\nCrew " + to_string(crew) + "\n" +
+		"Type: " + type + "\n" + "Name: " + name + "\n"
 		+ "Is it peaceful?(1/0)) " + to_string(is_peaceful) + "\n"
 		+ "Hull material: " + to_string(hull_length) + "\n"
-		+ "Speed = " + to_string(speed) + "\n"
-		+ "Crew: " + to_string(crew) + "\n";
+		+ "Speed = " + to_string(speed) + "\n";
+}
+
+string Sailboat::getData() {
+	return "Sailboat\n" + to_string(crew) + "\n" +
+		type + "\n" + name + "\n"
+		+ to_string(is_peaceful) + "\n"
+		+ to_string(hull_length) + "\n"
+		+ to_string(speed) + "\n";
 }

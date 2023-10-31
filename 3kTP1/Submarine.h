@@ -11,6 +11,7 @@ public:
 	Submarine(int crew, double Length, double Width, int TimeUnderWater, int MaxUnderWaterSpeed, string Weapon);
 	Submarine(Submarine& temp);
 	~Submarine();
+	virtual string getPrintData() override;
 	virtual string getData() override;
 	//virtual string Print() override;
 };
@@ -51,11 +52,20 @@ Submarine::~Submarine() {
 	cout << "\tSubmarine has been deleted" << endl;
 }
 
-string Submarine::getData() {
-	return "Submarine\nCrew" + to_string(crew) + "\n" +
+string Submarine::getPrintData() {
+	return "Submarine\nCrew " + to_string(crew) + "\n" +
 		"Length = " + to_string(Length) + "\n" +
 		"Width = " + to_string(Width) + "\n" +
 		"TimeUnderWater = " + to_string(TimeUnderWater) + "\n" +
 		"MaxUnderWaterSpeed = " + to_string(MaxUnderWaterSpeed) + "\n" +
 		"Weapon: " + Weapon + "\n";
+}
+
+string Submarine::getData() {
+	return "Submarine\n" + to_string(crew) + "\n" +
+		to_string(Length) + "\n" +
+		to_string(Width) + "\n" +
+		to_string(TimeUnderWater) + "\n" +
+		to_string(MaxUnderWaterSpeed) + "\n" +
+		Weapon + "\n";
 }

@@ -17,7 +17,9 @@ public:
 	Ship();
 	Ship(int crew);
 	virtual ~Ship();
+	virtual std::string getPrintData() = 0;
 	virtual std::string getData() = 0;
+	//virtual string Print() = 0;
 };
 
 Ship::Ship() : crew(0) {

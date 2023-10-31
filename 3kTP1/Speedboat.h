@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Ship.h"
 
 class Speedboat : public Ship {
@@ -10,6 +11,7 @@ public:
 	Speedboat(string purpose, string hull_material, string driving_characteristics, int speed, int crew);
 	Speedboat(Speedboat& temp);
 	~Speedboat();
+	virtual string getPrintData() override;
 	virtual string getData() override;
 
 };
@@ -33,8 +35,6 @@ Speedboat::Speedboat() {
 }
 
 
-
-
 Speedboat::Speedboat(Speedboat& temp) {
 	purpose = temp.purpose;
 	hull_material = temp.hull_material;
@@ -48,10 +48,18 @@ Speedboat::~Speedboat() {
 	cout << "\tSpeedboat has been deleted" << endl;
 }
 
-string Speedboat::getData() {
-	return "Purpose: " + purpose + "\n" +
+string Speedboat::getPrintData() {
+	return "Submarine\nCrew " + to_string(crew) + "\n" +
+		"Purpose: " + purpose + "\n" +
 		"Hull material: " + hull_material + "\n" +
 		"Driving characteristics: " + driving_characteristics + "\n" +
-		"Speed = " + to_string(speed) + "\n" +
-		"Crew: " + to_string(crew) + "\n";
+		"Speed = " + to_string(speed) + "\n";
+}
+
+string Speedboat::getData() {
+	return "Speedboat\n" + to_string(crew) + "\n" +
+		purpose + "\n" +
+		hull_material + "\n" +
+		driving_characteristics + "\n" +
+		to_string(speed) + "\n";
 }

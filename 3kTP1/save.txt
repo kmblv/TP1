@@ -1,16 +1,15 @@
-1
-Submarine
-Crew10
-Length = 2
-Width = 1m
-TimeUnderWater = 1s
-MaxUnderWaterSpeed = 100m
-Weapon: 10
 2
 Submarine
-Crew10
-Length = 2
-Width = 1m
-TimeUnderWater = 1s
-MaxUnderWaterSpeed = 100m
-Weapon: 10
+10
+10.000000
+11.000000
+10
+10
+1
+Submarine
+10
+10.000000
+11.000000
+10
+10
+1
