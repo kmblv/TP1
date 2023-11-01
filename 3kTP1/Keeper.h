@@ -6,6 +6,7 @@
 #include "Submarine.h"
 #include "Sailboat.h"
 #include "Speedboat.h"
+#include "Exception.h"
 class Keeper
 {
 private:
@@ -49,6 +50,8 @@ void Keeper::add(Ship* elem)
 
 void Keeper::del(size_t num)
 {
+	if (num < 0)
+		throw Exception("Нет объектов!");
 	delete ships.pop(num);
 }
 
